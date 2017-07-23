@@ -210,7 +210,7 @@ Module.register('MMM-LocalTransport', {
          *route alternative being a new list item*/
         var udt = document.createElement("div");
         //udt.innerHTML = moment(this.luasdata).fromNow().format("HH:mm:ss") + " (" +  this.luasdata + ")";
-		udt.innerHTML = " GLENCAIRN LUAS - Info updated " + moment.utc(moment(dn).diff(moment(this.luasdata))).format("mm:ss");
+		udt.innerHTML = " GLENCAIRN LUAS - Info updated " + moment.utc(moment(dn).diff(moment(this.luasdata))).format("mm:ss") + "<br>" + this.shorten(this.info.LUAS_Status, 75);
 		udt.className = "xsmall dimmed bold";
 		udt.style.borderBottomStyle="solid";
 		udt.style.borderWidth = "thin";
